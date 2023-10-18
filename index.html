@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escítala Cipher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f0f0f0; /* Fondo gris claro */
+            color: #333; /* Texto oscuro */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+        }
+
+        .cipher-card {
+            background-color: #85C1E9; /* Azul pastel para cifrar */
+        }
+
+        .decipher-card {
+            background-color: #FFA07A; /* Rosa pastel para descifrar */
+        }
+
+        .result-input {
+            margin-top: 10px;
+        }
+
+        /* Estilo para los botones */
+        .btn-cifrar {
+            background-color: #3498DB; /* Azul brillante para el botón de cifrar */
+            border-color: #3498DB; /* Borde azul brillante */
+            color: #fff; /* Texto en blanco */
+        }
+
+        .btn-descifrar {
+            background-color: #E74C3C; /* Rojo brillante para el botón de descifrar */
+            border-color: #E74C3C; /* Borde rojo brillante */
+            color: #fff; /* Texto en blanco */
+        }
+
+        .btn-cifrar:hover {
+            background-color: #2980B9; /* Cambio de color al pasar el mouse para cifrar */
+            border-color: #2980B9;
+        }
+
+        .btn-descifrar:hover {
+            background-color: #C0392B; /* Cambio de color al pasar el mouse para descifrar */
+            border-color: #C0392B;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>CIFRAR Y DECIFRAR CON METODO ESCITALA</h2>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card cipher-card">
+                    <h3>Cifrar</h3>
+                    <div class="form-group">
+                        <label for="encrypt-message">Mensaje:</label>
+                        <input type="textarea" class="form-control" id="cifrar" placeholder="Introduce el mensaje">
+                    </div>
+                    <button class="btn btn-cifrar" id="cifrar-btn">Cifrar</button>
+                    <div class="form-group result-input">
+                        <label for="encryption-result">Resultado:</label>
+                        <input type="textarea" class="form-control" id="result" readonly>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card decipher-card">
+                    <h3>Descifrar</h3>
+                    <div class="form-group">
+                        <label for="decrypt-message">Mensaje cifrado:</label>
+                        <input type="textarea" class="form-control" id="message_decrypt" placeholder="Introduce el mensaje cifrado">
+                    </div>
+                    <button class="btn btn-descifrar" id="descifrar-btn">Descifrar</button>
+                    <div class="form-group result-input">
+                        <label for "decryption-result">Resultado:</label>
+                        <input type="textarea" class="form-control" id="result_decrypt" readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
